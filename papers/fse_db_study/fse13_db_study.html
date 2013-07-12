@@ -29,7 +29,7 @@
 			<h1>An Empirical Analysis of the Co-evolution of Schema and Code in Database Applications</h1><br>
 			&nbsp;&nbsp;
 			
-			<h2>Introduction</h2>	
+			<h2>Overview</h2>	
 			<p>Modern database applications are among the most widely used and complex software systems. They constantly
 			 evolve,responding to changes to data, database schemas, and code. It is challenging to manage these changes 
 			 and ensure that everything co-evolves consistently. For example, when a database schema is modified, all the 
@@ -112,7 +112,7 @@
 			
 			<li><p><strong><a href = "http://www.weberp.org/">webERP</a></strong>
 			- webERP is a complete web based accounting and business management system.<br>
-			<a href="data/weberp_schemas.rar">schema files</a> (73 versions); &nbsp;&nbsp;
+			<a href="data/weberp_schemas.rar">schema files</a> (189 versions); &nbsp;&nbsp;
 			<a href="http://web-erp.svn.sourceforge.net/svnroot/web-erp">SVN Repo</a></p>
 			</li>
 			
@@ -122,13 +122,33 @@
 			<h2>Results</h2>	
 			&nbsp;&nbsp;
 			
-			<h2>Code/Scripts</h2>	
+			<h2>Code / Scripts</h2>	
+			<ul>
+			<li><p><strong><a href = "data/da_change_analyzer.rar">DAChangeAnalyzer</a></strong> - an analyzer that can extract changed lines, 
+			functions, classes and files from the selected revisions in SVN repository.<br></p></li>
+			
+			<li><p><strong>R scripts</strong></p></li>
+			
+			<li><p><strong>Gnuplot scripts</strong></p></li>
+			</ul>
 			&nbsp;&nbsp;
 			
 			<h2>Tools</h2>	
 			<ul>
 				<li>
-				<p><strong><a href="http://svnkit.com/">SVNKit</a></strong> - A pure Java toolkit to work with subversion repositories.</p>
+				<p><strong><a href="http://svnkit.com/">SVNKit</a></strong> 
+				- A pure Java toolkit to work with subversion repositories.</p>
+				</li>
+				
+				<li>
+				<p><strong><a href="http://code.google.com/p/java-diff-utils/">Java-diff-utils</a></strong> 
+				- an opensource library for performing the comparison operations between texts.</p>
+				</li>
+				
+				<li>
+				<p><strong><a href="http://adamspiers.org/computing/mysqldiff/">Mysqldiff</a></strong> 
+				- is suite of Perl modules and accompanying CLI script for comparing the schema (table 
+				structures) of two MySQL databases.</p>
 				</li>
 				
 				<li>
