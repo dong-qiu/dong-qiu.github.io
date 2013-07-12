@@ -1,0 +1,50 @@
+reset
+
+set size 1,1
+set term wxt size 1500, 1200
+
+set grid lw 3 
+set border lw 3
+
+#output of PNG
+set terminal pngcairo dashed size 1600, 1000 
+set output "atomic_in_table.png "
+
+#Set the margin 
+set bmargin 2.5
+set tmargin 2
+set lmargin 5
+
+set style boxplot range 1.5
+set style boxplot fraction 0.95
+set style boxplot separation 5
+set style fill solid 0.35
+set style boxplot outliers pointtype 7 
+set pointsize 2.0
+set style data boxplot
+set boxwidth 0.5
+
+
+unset key 
+set xtics ("copper." 1, "dotpro." 2, "e107" 3, "joomla" 4, "media." 5, "presta." 6, "round." 7, "tikiwiki" 8, "typo3" 9, "weberp" 10) scale 0.0
+set xtics nomirror
+set xtics font ", 23" scale 0 offset 0,-0.1 center 
+set ytics nomirror 
+set ytics font ", 25" rotate by 90 offset -1,0 center
+set xrange [0:11]
+set yrange [0:160]
+set bars large 
+
+plot 'coppermine.txt' using (1):1 lw 3 lt 1 lc 0, \
+'dotproject.txt' using (2):1 lw 3 lt 1 lc 0,\
+'e107.txt' using (3):1 lw 3 lt 1 lc 0,\
+'joomla.txt' using (4):1 lw 3 lt 1 lc 0,\
+'mediawiki.txt' using (5):1 lw 3 lt 1 lc 0,\
+'prestashop.txt' using (6):1 lw 3 lt 1 lc 0,\
+'roundcube.txt' using (7):1 lw 3 lt 1 lc 0,\
+'tikiwiki.txt' using (8):1 lw 3 lt 1 lc 0,\
+'typo3.txt' using (9):1 lw 3 lt 1 lc 0,\
+'weberp.txt' using (10):1 lw 3 lt 1 lc 0
+
+set output
+set term wxt

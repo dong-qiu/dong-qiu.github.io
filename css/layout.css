@@ -63,14 +63,14 @@ blockquote {
 }
 
 #header {
-	width: 900px;
+	width: 1000px;
 	height: 127px;
 	margin: 0 auto;
 	padding: 0px;
 }
 
 #navigation {
-	width: 900px;
+	width: 1000px;
 	height: 51px;
 	margin: 0px auto;
 	padding: 0px;
@@ -79,6 +79,7 @@ blockquote {
 #navigation ul {
 	margin: 0px;
 	list-style: none;
+	font-size:14px
 }
 
 #navigation li {
@@ -102,7 +103,7 @@ blockquote {
 
 
 #logo {
-	width: 900px;
+	width: 1000px;
 	height: 64px;
 	margin: 0 auto;
 	padding-top: 12px;
@@ -137,7 +138,7 @@ blockquote {
 }
 
 #splash {
-	width: 900px;
+	width: 1000px;
 	height: 300px;
 	margin: 0px auto;
 	padding: 30px 0px;
@@ -148,14 +149,14 @@ blockquote {
 }
 
 #page {
-	width: 950px;
+	width: 1000px;
 	margin: 0px auto;
 	padding: 40px 0px 20px 0px;
 }
 
 #column1 {
 	float: left;
-	width: 600px;
+	width: 630px;
 	padding-right: 30px;
 }
 
@@ -184,7 +185,7 @@ blockquote {
 
 #one_column {
 	float: left;
-	width: 950px;
+	width: 1000px;
 	padding-right: 30px;
 }
 
@@ -218,14 +219,14 @@ blockquote {
 }
 
 #footer {
-	width: 950px;
+	width: 1000px;
 	margin: 0px auto;
 	padding: 5px 0px;
 	background: url(../images/image03.jpg) repeat-x left top;
 }
 
 #footer p {
-	font-size: 10px;
+	font-size: 12px;
 	color: #90908E;
 }
 

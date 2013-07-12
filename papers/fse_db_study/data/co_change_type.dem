@@ -1,0 +1,36 @@
+reset
+unset title
+#output of PNG
+set terminal pngcairo dashed size 800, 1000 
+set output "co_change_type.png "
+
+set grid lw 3
+set grid y
+set grid nox
+set border lw 3
+
+unset key
+set style data histogram
+set style histogram clustered gap 1
+set style fill solid 1
+set boxwidth 0.4
+ 
+set xrange [0:4]
+#set mxtics 1
+set xtics ("S1" 0.5, "S2" 1.5, "S3" 2.5, "S4" 3.5) font ",25" 
+
+set yrange [0:60]
+set ytics 10 font ",25"
+
+
+set label "16.22%" font ",25" center at 0.5,17.72 
+set label "21.62%" font ",25" center at 1.5,23.12
+set label "50.67%" font ",25" center at 2.5,52.18 
+set label "11.49%" font ",25" center at 3.5,12.99 
+
+set label "(a) distribution of S1~S4" font ",27" center at 2,58 
+
+plot "co_change_type.txt" using 1:2 with boxes lc 9
+
+set output
+set term wxt

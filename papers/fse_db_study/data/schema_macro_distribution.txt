@@ -1,0 +1,12 @@
+Project		Trans	SR	RIR	AR	DQR	MR	Total
+copper.		54	45	0	1	18	0	118
+dotpro.		116	116	0	3	44	0	279
+e107		41	56	0	0	17	0	114
+joomla		263	515	0	27	83	0	888
+media. 		178	409	2	193	110	0	892
+presta.		177	655	0	69	27	0	928
+round.		17	25	2	18	39	0	101
+tikiwiki	735	720	2	41	710	0	2208
+typo3		84	121	0	0	44	0	249
+weberp		215	286	32	2	105	0	640
+

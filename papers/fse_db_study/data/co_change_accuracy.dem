@@ -1,0 +1,45 @@
+reset
+unset title
+#output of PNG
+set terminal pngcairo dashed size 800, 1000 
+set output "co_change_accuracy.png "
+
+set grid lw 3
+set grid y
+set grid nox
+set border lw 3
+
+unset key
+
+# the function that will be used in plot command to group results around value x into a bin of width s.  
+bin(x, s) = s*int(x/(s+0.00000001))
+bw = 20.00
+set boxwidth bw * 0.5
+set style fill solid 1
+ 
+set xrange [0:100]
+set mxtics 20
+set xtics ("0.0~0.2" 10, "0.2~0.4" 30, "0.4~0.6" 50, "0.6~0.8" 70, "0.8~1.0" 90) font ",25" 
+
+set yrange [0:80]
+set ytics 10 font ",25"
+
+#This expression takes the results from 1st column and groups them in intervals of bw 
+#Any result between 0 and 20 will be transformed into a value of 10. 
+#Similarly any results between 80 and 100 will be transformed into a value of 90.
+#The part of command smooth frequency takes all data points that have the same x 
+#value and adds their y values together. In our case y value is set to 0.675676 
+#meaning that we just want to count results in the interval.
+
+set label "10.28%" font ",25" center at 10,11.78 
+set label "5.61%" font ",25" center at 30,7.11
+set label "3.74%" font ",25" center at 50,5.24 
+set label "8.41%" font ",25" center at 70,9.91 
+set label "71.96%" font ",25" center at 90,73.46
+
+set label "(b) distribution of co-change precision" font ",27" at 8,77.5
+
+plot "co_change_accuracy.txt" using (bin($1,bw)+bw/2):(0.93458) smooth frequency with boxes lc 9
+
+set output
+set term wxt

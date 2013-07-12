@@ -1,0 +1,154 @@
+###global settings###
+reset
+set size 1,1
+#set term wxt size 1300, 500
+
+set grid lw 3
+
+set border lw 3
+
+set xrange [0:100]
+set yrange [0:100]
+
+#output of PNG
+set terminal pngcairo dashed size 2180, 1000 
+set output "table_column_trend.png "
+
+set multiplot layout 2,5  
+
+set macros
+TMARGIN = "set tmargin at screen 0.90; set bmargin at screen 0.475"
+BMARGIN = "set tmargin at screen 0.475; set bmargin at screen 0.05"
+L1MARGIN = "set lmargin at screen 0.020; set rmargin at screen 0.214"
+L2MARGIN = "set lmargin at screen 0.214; set rmargin at screen 0.408"
+L3MARGIN = "set lmargin at screen 0.408; set rmargin at screen 0.602"
+L4MARGIN = "set lmargin at screen 0.602; set rmargin at screen 0.796"
+L5MARGIN = "set lmargin at screen 0.796; set rmargin at screen 0.99"
+NXTICS = "set xtics ('' 0, '' 20, ''40, '' 60, '' 80, '' 100)"
+XTICS = "set xtics 0,20,100 font ', 18'"
+NYTICS ="set ytics ('' 0, '' 20, ''40, '' 60, '' 80, '' 100)"
+YTICS = "set ytics 0,20,100 font ', 18' rotate offset 1,0"
+NKEY= "unset key" 
+KEY= "set key horizontal at screen 0.99,0.97; set key reverse Left; set key width 4; \
+	  set key samplen 8; set key height 1.5; set key font ', 18'; set key box lw 2"
+
+###The first figure###
+
+@TMARGIN; @L1MARGIN; 	
+@NXTICS; @YTICS
+@NKEY
+
+set label "coppermine" right font ", 20" at graph 0.95,0.1
+
+plot 'coppermine.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'coppermine.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+###The second figure###
+
+@TMARGIN; @L2MARGIN
+@NXTICS; @NYTICS
+@NKEY
+
+unset label
+set label "dotproject" right font ", 20" at graph 0.95,0.1
+
+plot 'dotproject.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'dotproject.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+
+###The third figure###
+
+@TMARGIN; @L3MARGIN
+@NXTICS; @NYTICS
+@NKEY
+
+unset label
+set label "e107" right font ", 20" at graph 0.95,0.1
+
+plot 'e107.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'e107.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+###The fourth figure###
+
+@TMARGIN; @L4MARGIN
+@NXTICS; @NYTICS
+@NKEY
+
+unset label
+set label "joomla!" right font ", 20" at graph 0.95,0.1
+
+plot 'joomla.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'joomla.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+###The fifth figure###
+
+@TMARGIN; @L5MARGIN
+@NXTICS; @NYTICS
+@KEY
+
+unset label
+set label "mediawiki" right font ", 20" at graph 0.95,0.1
+
+plot 'mediawiki.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'mediawiki.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+###The sixth figure###
+
+@BMARGIN; @L1MARGIN
+@XTICS; @YTICS
+@NKEY
+
+unset label
+set label "prestashop" right font ", 20" at graph 0.95,0.1
+
+plot 'prestashop.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'prestashop.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+###The seventh figure###
+@BMARGIN; @L2MARGIN
+@XTICS; @NYTICS
+@NKEY
+
+unset label
+set label "roundcube" right font ", 20" at graph 0.95,0.1
+
+plot 'roundcube.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'roundcube.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+###The eighth figure###
+@BMARGIN; @L3MARGIN
+@XTICS; @NYTICS
+@NKEY
+
+unset label
+set label "tikiwiki" right font ", 20" at graph 0.95,0.1
+
+plot 'tikiwiki.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'tikiwiki.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+###The ninth figure###
+@BMARGIN; @L4MARGIN
+@XTICS; @NYTICS
+@NKEY
+
+unset label
+set label "typo3" right font ", 20" at graph 0.95,0.1
+
+plot 'typo3.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'typo3.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+
+###The tenth figure###
+@BMARGIN; @L5MARGIN
+@XTICS; @NYTICS
+@NKEY
+
+unset label
+set label "weberp" right font ", 20" at graph 0.95,0.1
+
+plot 'weberp.txt' using 1:2 w l  lc 7 lw 3 lt 1 title "tables", \
+     'weberp.txt' using 1:3 w l  lc 7 lw 3 lt 2 title "columns"
+
+unset multiplot
+set output
+set term wxt

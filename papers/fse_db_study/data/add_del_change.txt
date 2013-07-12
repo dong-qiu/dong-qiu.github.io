@@ -1,0 +1,12 @@
+Project Addition Deletion Change Total
+copper.  	60.2     22.0   17.8   100      
+dotpro.  	51.6     15.8   32.6   100      
+e107        57.0     20.2   22.8   100      
+joomla     	46.2     19.0   34.8   100      
+media.   	44.2     20.6   35.2   100      
+presta.  	42.2     15.2   42.6   100      
+round.   	39.6     33.7   26.7   100      
+tikiwiki    68.1     15.6   16.3   100      
+typo3       47.0     16.1   36.9   100      
+weberp      54.5     14.4   31.1   100      
+

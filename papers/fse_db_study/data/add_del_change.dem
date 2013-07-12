@@ -1,0 +1,83 @@
+###global settings###
+reset
+set size 1,1
+
+#output of PNG
+set terminal pngcairo dashed size 1600, 1000 
+set output "add_del_change.png "
+
+set grid y lw 3
+set border lw 3
+set label 
+
+#Set the margin 
+set tmargin 3.0
+set bmargin 2.0
+set lmargin 5.0
+set rmargin 2.0
+
+#Set the key
+set key invert reverse Left outside 
+set key font ",22" 
+set key right at 10,106
+set key horizontal Left
+set key samplen 5
+set key spacing 2.0
+set key width 10
+
+set xtics font "arial, 22" scale 0 offset 0,0 center 
+#set xtics font "arial, 20" center
+set yrange [0:100]
+set ytics (20,40,60,80,100)
+set ytics font "arial, 25" format "%.0f%%" rotate by 90 center offset -1,0
+set style data histograms
+set style histogram rowstacked
+set style fill pattern 2 border
+set boxwidth 0.50
+
+set label 11 font ",20" rotate by 90 center textcolor rgb "#000000" "60.2%" at graph 0.125, graph 0.301 
+set label 12 font ",20" rotate by 90 center textcolor rgb "#000000" "22.0%" at graph 0.125, graph 0.712
+set label 13 font ",20" rotate by 90 center textcolor rgb "#000000" "17.8%" at graph 0.125, graph 0.911 
+
+set label 21 font ",20" rotate by 90 center textcolor rgb "#000000" "51.6%" at graph 0.215, graph 0.258 
+set label 22 font ",20" rotate by 90 center textcolor rgb "#000000" "15.8%" at graph 0.215, graph 0.595
+set label 23 font ",20" rotate by 90 center textcolor rgb "#000000" "32.6%" at graph 0.215, graph 0.837  
+
+set label 31 font ",20" rotate by 90 center textcolor rgb "#000000" "57.0%" at graph 0.305, graph 0.285 
+set label 32 font ",20" rotate by 90 center textcolor rgb "#000000" "20.2%" at graph 0.305, graph 0.671
+set label 33 font ",20" rotate by 90 center textcolor rgb "#000000" "22.8%" at graph 0.305, graph 0.886 
+
+set label 41 font ",20" rotate by 90 center textcolor rgb "#000000" "46.2%" at graph 0.395, graph 0.231 
+set label 42 font ",20" rotate by 90 center textcolor rgb "#000000" "19.0%" at graph 0.395, graph 0.557
+set label 43 font ",20" rotate by 90 center textcolor rgb "#000000" "34.8%" at graph 0.395, graph 0.826   
+
+set label 51 font ",20" rotate by 90 center textcolor rgb "#000000" "44.2%" at graph 0.490, graph 0.221 
+set label 52 font ",20" rotate by 90 center textcolor rgb "#000000" "20.6%" at graph 0.490, graph 0.545
+set label 53 font ",20" rotate by 90 center textcolor rgb "#000000" "35.2%" at graph 0.490, graph 0.824 
+
+set label 61 font ",20" rotate by 90 center textcolor rgb "#000000" "42.2%" at graph 0.580, graph 0.211 
+set label 62 font ",20" rotate by 90 center textcolor rgb "#000000" "15.2%" at graph 0.580, graph 0.498
+set label 63 font ",20" rotate by 90 center textcolor rgb "#000000" "42.6%" at graph 0.580, graph 0.787 
+
+set label 71 font ",20" rotate by 90 center textcolor rgb "#000000" "39.6%" at graph 0.670, graph 0.198 
+set label 72 font ",20" rotate by 90 center textcolor rgb "#000000" "33.7%" at graph 0.670, graph 0.5645
+set label 73 font ",20" rotate by 90 center textcolor rgb "#000000" "26.7%" at graph 0.670, graph 0.8665
+
+set label 81 font ",20" rotate by 90 center textcolor rgb "#000000" "68.1%" at graph 0.760, graph 0.3405 
+set label 82 font ",20" rotate by 90 center textcolor rgb "#000000" "15.6%" at graph 0.760, graph 0.759
+set label 83 font ",20" rotate by 90 center textcolor rgb "#000000" "16.3%" at graph 0.760, graph 0.9185 
+
+set label 91 font ",20" rotate by 90 center textcolor rgb "#000000" "47.0%" at graph 0.850, graph 0.235 
+set label 92 font ",20" rotate by 90 center textcolor rgb "#000000" "16.1%" at graph 0.850, graph 0.5505
+set label 93 font ",20" rotate by 90 center textcolor rgb "#000000" "36.9%" at graph 0.850, graph 0.8155
+
+set label 101 font ",20" rotate by 90 center textcolor rgb "#000000" "54.5%" at graph 0.940, graph 0.2725 
+set label 102 font ",20" rotate by 90 center textcolor rgb "#000000" "14.4%" at graph 0.940, graph 0.617
+set label 103 font ",20" rotate by 90 center textcolor rgb "#000000" "31.1%" at graph 0.940, graph 0.8445 
+
+
+plot 'add_del_change.txt' using (100.*$2/$5):xtic(1) t column(2) lw 2 lt -1, \
+for [i=3:4] '' using (100.*column(i)/column(5)) title column(i) lw 2 lt -1
+
+set output
+set term wxt

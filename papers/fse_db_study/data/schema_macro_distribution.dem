@@ -1,0 +1,103 @@
+###global settings###
+reset
+set size 1,1
+
+#output of PNG
+set terminal pngcairo dashed size 1500, 1200 
+set output "schema_macro_distribution.png "
+
+set grid y lw 3
+set border lw 3
+set label 
+
+#Set the margin 
+set tmargin 2.5 
+set bmargin 2.0
+set lmargin 6.0
+set rmargin 2.0
+
+#Set the key
+set key invert reverse Left outside 
+set key font ",22" 
+set key right at 10.5,104
+set key horizontal Left
+set key samplen 5
+set key spacing 2.0
+set key width 10
+
+set xtics font "arial, 22" scale 0 offset 0,0 center 
+#set xtics font "arial, 20" center
+set yrange [0:100]
+set ytics (20,40,60,80,100)
+set ytics font "arial, 25" format "%.0f%%" rotate by 90 center offset -1,0
+set style data histograms
+set style histogram rowstacked
+set style fill pattern 7 border
+set boxwidth 0.50
+
+set label 11 font ",20" rotate by 90 center textcolor rgb "#000000" "45.8%" at graph 0.125, graph 0.229 
+set label 12 font ",20" rotate by 90 center textcolor rgb "#000000" "38.1%" at graph 0.125, graph 0.648
+set label 13 font ",20" rotate by 90 center textcolor rgb "#000000" "0.8%" at graph 0.125, graph 0.843 
+set label 14 font ",20" rotate by 90 center textcolor rgb "#000000" "15.3%" at graph 0.125, graph 0.924 
+
+set label 21 font ",20" rotate by 90 center textcolor rgb "#000000" "41.6%" at graph 0.215, graph 0.208 
+set label 22 font ",20" rotate by 90 center textcolor rgb "#000000" "41.6%" at graph 0.215, graph 0.624
+set label 23 font ",20" rotate by 90 center textcolor rgb "#000000" "1.1%" at graph 0.215, graph 0.837 
+set label 24 font ",20" rotate by 90 center textcolor rgb "#000000" "15.8%" at graph 0.215, graph 0.921 
+
+set label 31 font ",20" rotate by 90 center textcolor rgb "#000000" "36%" at graph 0.305, graph 0.18 
+set label 32 font ",20" rotate by 90 center textcolor rgb "#000000" "49.1%" at graph 0.305, graph 0.605
+set label 33 font ",20" rotate by 90 center textcolor rgb "#000000" "14.9%" at graph 0.305, graph 0.925 
+
+set label 41 font ",20" rotate by 90 center textcolor rgb "#000000" "29.6%" at graph 0.395, graph 0.148 
+set label 42 font ",20" rotate by 90 center textcolor rgb "#000000" "58.0%" at graph 0.395, graph 0.586
+set arrow 43 from graph 0.405, graph 0.835 to graph 0.390, graph 0.885 filled size 0.2,15,60 lw 2
+set label 43 font ",20" rotate by 90 center textcolor rgb "#000000" "3.0%" at graph 0.415, graph 0.80 
+set label 44 font ",20" rotate by 90 center textcolor rgb "#000000" "9.3%" at graph 0.395, graph 0.953  
+
+set label 51 font ",20" rotate by 90 center textcolor rgb "#000000" "20.0%" at graph 0.490, graph 0.10 
+set label 52 font ",20" rotate by 90 center textcolor rgb "#000000" "45.9%" at graph 0.490, graph 0.429
+set arrow 53 from graph 0.495, graph 0.609 to graph 0.480, graph 0.656 filled size 0.2,15,60 lw 2
+set label 53 font ",20" rotate by 90 center textcolor rgb "#000000" "0.2%" at graph 0.505, graph 0.570 
+set label 54 font ",20" rotate by 90 center textcolor rgb "#000000" "21.6%" at graph 0.490, graph 0.768 
+set label 55 font ",20" rotate by 90 center textcolor rgb "#000000" "12.3%" at graph 0.490, graph 0.938 
+
+set label 61 font ",20" rotate by 90 center textcolor rgb "#000000" "19.1%" at graph 0.580, graph 0.095 
+set label 62 font ",20" rotate by 90 center textcolor rgb "#000000" "70.6%" at graph 0.580, graph 0.544
+set arrow 63 from graph 0.590, graph 0.870 to graph 0.570, graph 0.934 filled size 0.2,15,60 lw 2
+set label 63 font ",20" rotate by 90 center textcolor rgb "#000000" "7.4%" at graph 0.600, graph 0.850 
+set arrow 64 from graph 0.590, graph 0.954 to graph 0.570, graph 0.985 filled size 0.2,15,60 lw 2
+set label 64 font ",20" rotate by 90 center textcolor rgb "#000000" "2.9%" at graph 0.600, graph 0.934 
+
+set label 71 font ",20" rotate by 90 center textcolor rgb "#000000" "16.8%" at graph 0.670, graph 0.084 
+set label 72 font ",20" rotate by 90 center textcolor rgb "#000000" "24.8%" at graph 0.670, graph 0.292
+set label 73 font ",20" rotate by 90 center textcolor rgb "#000000" "2.0%" at graph 0.670, graph 0.426 
+set label 74 font ",20" rotate by 90 center textcolor rgb "#000000" "17.8%" at graph 0.670, graph 0.525 
+set label 75 font ",20" rotate by 90 center textcolor rgb "#000000" "38.6%" at graph 0.670, graph 0.807 
+
+set label 81 font ",20" rotate by 90 center textcolor rgb "#000000" "33.3%" at graph 0.760, graph 0.166 
+set label 82 font ",20" rotate by 90 center textcolor rgb "#000000" "32.6%" at graph 0.760, graph 0.496
+set arrow 83 from graph 0.770, graph 0.629 to graph 0.750, graph 0.659 filled size 0.2,15,60 lw 2
+set label 83 font ",20" rotate by 90 center textcolor rgb "#000000" "0.1%" at graph 0.780, graph 0.609 
+set arrow 84 from graph 0.770, graph 0.709 to graph 0.750, graph 0.669 filled size 0.2,15,60 lw 2
+set label 84 font ",20" rotate by 90 center textcolor rgb "#000000" "1.9%" at graph 0.780, graph 0.729 
+set label 85 font ",20" rotate by 90 center textcolor rgb "#000000" "32.2%" at graph 0.760, graph 0.839
+
+set label 91 font ",20" rotate by 90 center textcolor rgb "#000000" "33.7%" at graph 0.850, graph 0.169 
+set label 92 font ",20" rotate by 90 center textcolor rgb "#000000" "48.6%" at graph 0.850, graph 0.580
+set label 93 font ",20" rotate by 90 center textcolor rgb "#000000" "17.7%" at graph 0.850, graph 0.912
+
+set label 101 font ",20" rotate by 90 center textcolor rgb "#000000" "33.6%" at graph 0.940, graph 0.168 
+set label 102 font ",20" rotate by 90 center textcolor rgb "#000000" "44.7%" at graph 0.940, graph 0.559
+set arrow 103 from graph 0.950, graph 0.758 to graph 0.935, graph 0.808 filled size 0.2,15,60 lw 2
+set label 103 font ",20" rotate by 90 center textcolor rgb "#000000" "5.0%" at graph 0.960, graph 0.748 
+set arrow 104 from graph 0.950, graph 0.844 to graph 0.935, graph 0.834 filled size 0.2,15,60 lw 2
+set label 104 font ",20" rotate by 90 center textcolor rgb "#000000" "0.3%" at graph 0.960, graph 0.854 
+set label 105 font ",20" rotate by 90 center textcolor rgb "#000000" "16.4%" at graph 0.940, graph 0.918
+
+
+plot 'schema_macro_distribution.txt' using (100.*$2/$8):xtic(1) t column(2) lw 2 lt -1, \
+for [i=3:7] '' using (100.*column(i)/column(8)) title column(i) lw 2 lt -1
+
+set output
+set term wxt
