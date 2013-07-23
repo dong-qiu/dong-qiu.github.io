@@ -32,29 +32,34 @@
 			<a href="http://esec-fse.inf.ethz.ch/"><I>Proceedings of ESEC/FSE 2013.</I></a></P>
 			&nbsp;&nbsp;
 			<h2>Overview</h2>	
-			<p>Modern database applications are among the most widely used and complex software systems. They constantly
-			 evolve,responding to changes to data, database schemas, and code. It is challenging to manage these changes 
-			 and ensure that everything co-evolves consistently. For example, when a database schema is modified, all the 
-			 code that interacts with the database must be changed accordingly. Although database evolution and software 
-			 evolution have been extensively studied in isolation, the co-evolution of schema and code has largely been
-			 unexplored.</p>
+			<p>Modern database applications are among the most widely used and complex software systems. 
+			They constantly evolve,responding to changes to data, database schemas, and code. It is 
+			challenging to manage these changes and ensure that everything co-evolves consistently. For 
+			example, when a database schema is modified, all the code that interacts with the database 
+			must be changed accordingly. Although database evolution and software evolution have been 
+			extensively studied in isolation, the co-evolution of schema and code has largely been
+			unexplored.</p>
 			 
-			 <p>This paper presents the first comprehensive empirical analysis of the co-evolution of database schemas and 
-			  code in ten popular large open-source database applications, totaling over 160K revisions. Our major findings
-			  include: 1) Database schemas evolve frequently during the application lifecycle, exhibiting a variety of change 
-			  types with similar distributions across the studied applications; 2) Overall,schema changes induce significant 
-			  code-level modifications, while certain change types have more impact on code than others; and 3) Co-change 
-			  analyses can be viable to automate or assist with database application evolution. We have also observed that: 
-			  1) 80% of the schema changes happened in 20-30% of the tables, while nearly 40% of the tables did not change; 
-			  and 2) Referential integrity constraints and stored procedures are rarely used in our studied subjects. We 
-			  believe that our study reveals new insights into how database applications evolve and useful guidelines for 
-			  designing assistive tools to aid their evolution.
-			 </p>
-			 <p>More details are shown in the <a href="../../pdfs/fse13-db-study.pdf">full version</a> of this study.</p>
+			<p>This paper presents the first comprehensive empirical analysis of the co-evolution of 
+			database schemas and code in ten popular large open-source database applications, totaling 
+			over 160K revisions. Our major findings include: 1) Database schemas evolve frequently during 
+			the application lifecycle, exhibiting a variety of change types with similar distributions 
+			across the studied applications; 2) Overall,schema changes induce significant code-level 
+			modifications, while certain change types have more impact on code than others; and 3) Co-change 
+			analyses can be viable to automate or assist with database application evolution. We have 
+			also observed that: 1) 80% of the schema changes happened in 20-30% of the tables, while 
+			nearly 40% of the tables did not change; and 2) Referential integrity constraints and stored 
+			procedures are rarely used in our studied subjects. We believe that our study reveals new 
+			insights into how database applications evolve and useful guidelines for designing assistive 
+			tools to aid their evolution.</p>
+			 
+			<p>More details are shown in the <a href="../../pdfs/fse13-db-study.pdf">full version</a> of 
+			this study.</p>
 			&nbsp;&nbsp;
 			<h2>Data</h2>	
-			<p>We studied <strong>ten</strong> poplular <a href="http://en.wikipedia.org/wiki/Database_application">database 
-			applications</a>, the data collected from these projects are listed as follows:</p>
+			<p>We studied <strong>ten</strong> poplular 
+			<a href="http://en.wikipedia.org/wiki/Database_application">database applications</a>, 
+			the data collected from these projects are listed as follows:</p>
 			<ul>
 			<li><p><strong><a href = "http://coppermine-gallery.net/">Coppermine</a></strong>
 			- a multi-purpose fully-featured and integrated web picture gallery script written in PHP.<br>
@@ -73,7 +78,8 @@
 			</p></li>
 			
 			<li><p><strong><a href = "http://e107.org/">e107</a></strong>
-			- is a free (open-source) content management system allowing you to easily manage and publish your content.<br>
+			- is a free (open-source) content management system allowing you to easily manage and publish 
+			your content.<br>
 			<a href="https://e107.svn.sourceforge.net/svnroot/e107/">SVN Repo</a>&nbsp;&nbsp;
 			<a href="data/e107_schemas.rar">schema files</a> (76 versions) &nbsp;&nbsp;
 			<a href="data/e107_schema_changes.xlsx">schema changes</a>&nbsp;&nbsp;
@@ -81,7 +87,8 @@
 			</p></li>
 			
 			<li><p><strong><a href = "http://www.joomla.org/">Joomla!</a></strong>
-			- is a content management system (CMS), which enables you to build Web sites and powerful online applications.<br>
+			- is a content management system (CMS), which enables you to build Web sites and powerful 
+			online applications.<br>
 			<a href="http://joomlacode.org/svn/joomla/">SVN Repo</a>&nbsp;&nbsp;
 			<a href="data/joomla_schemas.rar">schema files</a> (532 versions)&nbsp;&nbsp;
 			<a href="data/joomla_schema_changes.xlsx">schema changes</a>&nbsp;&nbsp;
@@ -199,7 +206,8 @@
 			
 			<h2>Code </h2>	
 			<ul>
-			<li><p><strong><a href = "data/da_change_analyzer.rar">DAChangeAnalyzer</a></strong> - an analyzer that can extract changed lines, 
+			<li><p><strong><a href = "data/da_change_analyzer.rar">DAChangeAnalyzer</a></strong> - an analyzer 
+			that can extract changed lines, 
 			functions, classes and files from the selected revisions in SVN repository.<br></p></li>
 			</ul>
 			&nbsp;&nbsp;
@@ -223,12 +231,14 @@
 				</li>
 				
 				<li>
-				<p><strong><a href="http://www.r-project.org/">R</a></strong> - is a software environment for statistical computing and graphics.
+				<p><strong><a href="http://www.r-project.org/">R</a></strong> - is a software environment 
+				for statistical computing and graphics.
 				</p>
 				</li>
 				
 				<li>
-				<p><strong><a href="http://www.gnuplot.info/">Gnuplot</a></strong> - is portable command-line driven graphing utility.</p>
+				<p><strong><a href="http://www.gnuplot.info/">Gnuplot</a></strong> - is portable command-line 
+				driven graphing utility.</p>
 				</li>
 			</ul>
 			&nbsp;&nbsp;
@@ -236,22 +246,26 @@
 			<h2>Authors</h2>	
 				<ul>
 				<li>
-					<p><strong><a href="http://ise.seu.edu.cn/people/dongqiu">Dong Qiu</a></strong> - Southest University, China <br>
-					E-mail: dongqiu <span style="font-style: italic;">at</span> seu <span style="font-style: italic;">dot</span> edu  
+					<p><strong><a href="http://ise.seu.edu.cn/people/dongqiu">Dong Qiu</a></strong> 
+					- Southest University, China <br>
+					E-mail: dongqiu <span style="font-style: italic;">at</span> seu 
+					<span style="font-style: italic;">dot</span> edu  
 					<span style="font-style: italic;">dot</span> cn</p>
 				</li>
 				<li>
-					<p><strong><a href="http://cse.seu.edu.cn/people/bx.li/">Bixin Li</a></strong> - Southest University, China <br>
-					E-mail: bx.li <span style="font-style: italic;">at</span> seu <span stle="font-style: italic;">dot</span> edu  
+					<p><strong><a href="http://cse.seu.edu.cn/people/bx.li/">Bixin Li</a></strong> 
+					- Southest University, China <br>
+					E-mail: bx.li <span style="font-style: italic;">at</span> seu 
+					<span stle="font-style: italic;">dot</span> edu  
 					<span style="font-style: italic;">dot</span> cn</p>
 				</li>
 				<li>
-					<p><strong><a href="http://www.cs.ucdavis.edu/~su/">Zhendong Su</a></strong> - University of California, Davis, USA <br>
-					E-mail: su <span style="font-style: italic;">at</span> cs <span style="font-style: italic;">dot</span> ucdavis  
+					<p><strong><a href="http://www.cs.ucdavis.edu/~su/">Zhendong Su</a></strong> - 
+					University of California, Davis, USA <br>
+					E-mail: su <span style="font-style: italic;">at</span> cs 
+					<span style="font-style: italic;">dot</span> ucdavis  
 					<span style="font-style: italic;">dot</span> edu</p>
 				</li>
-				
-				
 				</ul>
 			</div>
 		</div>
