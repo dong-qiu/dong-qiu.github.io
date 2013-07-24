@@ -183,6 +183,39 @@ blockquote {
 	color: #525250;
 }
 
+#pub_col {
+	float: left;
+	width: 800px;
+	padding-right: 30px;
+}
+
+#pub_col h1 {
+	padding-bottom: 6px;
+	letter-spacing: -1px;
+	font-size: 24px;
+	font-weight: normal;
+	color: #525250;
+}
+
+#pub_col h2 {
+	padding-bottom: 6px;
+	background: url(../images/image03.jpg) repeat-x left bottom;
+	letter-spacing: -1px;
+	font-size: 24px;
+	font-weight: normal;
+	color: #525250;
+}
+
+#pub_col h3 {
+	padding-bottom: 6px;
+	background: url(../images/image03.jpg) repeat-x left bottom;
+	letter-spacing: -1px;
+	font-size: 20px;
+	font-weight: normal;
+	color: #525250;
+}
+
+
 #single_col {
 	float: left;
 	width: 1000px;
@@ -202,6 +235,15 @@ blockquote {
 	background: url(../images/image03.jpg) repeat-x left bottom;
 	letter-spacing: -1px;
 	font-size: 24px;
+	font-weight: normal;
+	color: #525250;
+}
+
+#single_col h3 {
+	padding-bottom: 6px;
+	background: url(../images/image03.jpg) repeat-x left bottom;
+	letter-spacing: -1px;
+	font-size: 20px;
 	font-weight: normal;
 	color: #525250;
 }
