@@ -154,13 +154,13 @@ blockquote {
 	padding: 40px 0px 20px 0px;
 }
 
-#column1 {
+#double_col_left {
 	float: left;
 	width: 630px;
 	padding-right: 30px;
 }
 
-#column1 h2 {
+#double_col_left h2 {
 	padding-bottom: 6px;
 	background: url(../images/image03.jpg) repeat-x left bottom;
 	letter-spacing: -1px;
@@ -169,12 +169,12 @@ blockquote {
 	color: #525250;
 }
 
-#column2 {
+#double_col_right {
 	float: right;
 	width: 300px;
 }
 
-#column2 h2 {
+#double_col_right h2 {
 	padding-bottom: 6px;
 	background: url(../images/image03.jpg) repeat-x left bottom;
 	letter-spacing: -1px;
@@ -183,13 +183,13 @@ blockquote {
 	color: #525250;
 }
 
-#one_column {
+#single_col {
 	float: left;
 	width: 1000px;
 	padding-right: 30px;
 }
 
-#one_column h1 {
+#single_col h1 {
 	padding-bottom: 6px;
 	letter-spacing: -1px;
 	font-size: 24px;
@@ -197,7 +197,7 @@ blockquote {
 	color: #525250;
 }
 
-#one_column h2 {
+#single_col h2 {
 	padding-bottom: 6px;
 	background: url(../images/image03.jpg) repeat-x left bottom;
 	letter-spacing: -1px;
